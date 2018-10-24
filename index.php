@@ -1,1 +1,1 @@
-<?php header( 'Location: /dist/burgerQueen/index.html' ) ;  ?>
+<?php header( 'Location: /burgerQueen/dist/burgerQueen/index.html' ) ;  ?>
