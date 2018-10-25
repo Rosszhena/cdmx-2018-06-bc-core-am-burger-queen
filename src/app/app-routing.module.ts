@@ -6,12 +6,13 @@ import { RegisterComponent } from './components/register/register.component';
 import { PrivadoComponent } from './components/privado/privado.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'privado', component: PrivadoComponent},
+  {path: 'privado', component: PrivadoComponent, canActivate: [AuthGuard]},
   {path: '**', component: NotFoundComponent}
 ];
 
