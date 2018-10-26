@@ -11,7 +11,7 @@ export class CustomerComponent implements OnInit {
 
   constructor(
      public router: Router,
-     private customerService: CustomerService) { }
+     public customerService: CustomerService) { }
      submitted: boolean;
      formControls = this.customerService.form.controls;
 
