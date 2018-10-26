@@ -33,4 +33,11 @@ export class AuthService {
   logout() {
   return this.afAuth.auth.signOut();
   }
+  
+  resetPassword(email: string) {
+  return this.afAuth.auth.sendPasswordResetEmail(email)
+  .then(()=>{
+    alert('listo');
+  }).catch(err => console.log(err));
+   }
 }

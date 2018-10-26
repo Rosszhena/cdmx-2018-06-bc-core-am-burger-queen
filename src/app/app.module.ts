@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { PrivadoComponent } from './components/privado/privado.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
+
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {FlashMessagesService} from 'angular2-flash-messages';
 import { AngularFireModule } from '@angular/fire';
@@ -19,6 +20,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { AuthService } from './servicios/auth.service';
 import { AuthGuard } from './guards/auth.guard';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import { AuthGuard } from './guards/auth.guard';
     RegisterComponent,
     LoginComponent,
     PrivadoComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
