@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { CustomerService } from '../../../shared/customer.service';
 
 @Component({
@@ -27,4 +26,5 @@ export class CustomerComponent implements OnInit {
       this.submitted = false;
   }
 
+}
 }
