@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +22,9 @@ import { environment } from '../environments/environment';
 import { AuthService } from './servicios/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-
+import { CustomerComponent } from './components/privado/customer/customer.component';
+import { CustomerListComponent } from './components/privado/customer-list/customer-list.component';
+import { CustomerService } from './shared/customer.service';
 
 
 @NgModule({
@@ -33,17 +36,20 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     LoginComponent,
     PrivadoComponent,
     NotFoundComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    CustomerComponent,
+    CustomerListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     FlashMessagesModule
   ],
-  providers: [AuthService, AuthGuard, FlashMessagesService],
+  providers: [AuthService, AuthGuard, FlashMessagesService, CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

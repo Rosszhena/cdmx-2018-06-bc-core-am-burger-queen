@@ -1,0 +1,4 @@
+src 
+    app
+        customer
+            customer.component.ts
